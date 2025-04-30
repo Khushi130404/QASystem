@@ -1,4 +1,5 @@
 import os
+import logging
 from pathlib import Path
 
 list_of_files = [
@@ -13,7 +14,7 @@ list_of_files = [
     "setup.py"]
 
 for filepath in list_of_files:
-    filepath = Path(file_path)
+    filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
     if filedir !="":
         os.makedirs(filedir, exist_ok=True)
